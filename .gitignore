@@ -1,0 +1,43 @@
+# Secrets and config
+.env
+config.php
+db.php
+connect.php
+
+# User uploads and logs
+uploads/
+*.log
+
+# Python
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ML models and large data (download these separately)
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.h5
+*.pkl
+*.onnx
+models/
+*.zip
+*.rar
+
+# Dependencies
+node_modules/
+vendor/
+
+# Database dumps with real data
+*.sqlite
+backup*.sql
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
