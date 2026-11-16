@@ -1,0 +1,98 @@
+/* ===== DASHBOARD BASE ===== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== MAIN WRAPPER ===== */
+.dash-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ===== CARD / PANEL ===== */
+.card {
+  background: #ffffff;
+  padding: 22px 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  margin-bottom: 25px;
+}
+
+/* ===== HEADINGS ===== */
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #2d3436;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #2d3436;
+}
+
+/* ===== ACTION LINKS ===== */
+.top-actions {
+  margin-bottom: 15px;
+}
+
+.top-actions a {
+  font-weight: bold;
+  color: #0984e3;
+  text-decoration: none;
+}
+
+.top-actions a:hover {
+  text-decoration: underline;
+}
+
+/* ===== TABLE ===== */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th {
+  background: #f4f6f8;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 10px 12px;
+  border: 1px solid #dcdde1;
+  text-align: left;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* ===== ACTION LINKS IN TABLE ===== */
+td a {
+  margin-right: 8px;
+  font-weight: bold;
+  color: #0984e3;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FOOTER LINK ===== */
+.back-link {
+  margin-top: 15px;
+  display: inline-block;
+  font-weight: bold;
+  color: #0984e3;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}

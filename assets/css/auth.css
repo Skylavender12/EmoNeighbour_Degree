@@ -1,0 +1,112 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card */
+.container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 520px;
+  max-width: 92%;
+  overflow: hidden;
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Forgot row */
+.forgot-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  margin: 4px 0 20px;
+  font-size: 14px;
+}
+
+.forgot-row a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+/* Button width controller */
+.btn-width {
+  width: 420px;      /* matches your screenshot */
+  max-width: 100%;
+  margin: 0 auto;    /* centered */
+}
+
+/* Login button */
+button {
+  height: 44px;
+  padding: 0 10px;
+  background: #0984e3;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  line-height: 44px;
+}
+
+button:hover {
+  background: #74b9ff;
+}
+
+/* Create account as button */
+.container a[href="register.php"] {
+  height: 44px;
+  padding: 0 10px;
+  background: #0984e3;
+  color: #ffffff !important;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none !important;
+  display: block;
+  line-height: 44px;
+  margin-top: 14px; /* space between buttons */
+}
+
+.container a[href="register.php"]:hover {
+  background: #74b9ff;
+  color: #ffffff !important;
+}
+
+/* Message */
+.message {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}

@@ -1,0 +1,172 @@
+/* feedback.css */
+
+:root{
+  --bg1:#74ebd5;
+  --bg2:#acb6e5;
+
+  --card:#fff;
+  --text:#222;
+  --muted: rgba(0,0,0,0.62);
+
+  --shadow: 0 6px 16px rgba(0,0,0,0.12);
+  --shadow2: 0 10px 22px rgba(0,0,0,0.16);
+
+  --radius: 14px;
+
+  --blue:#1976d2;
+  --blueHover:#1565c0;
+}
+
+*{ box-sizing:border-box; }
+
+html, body{
+  margin:0;
+  padding:0;
+  font-family:'Segoe UI', sans-serif;
+  background: linear-gradient(to right, var(--bg1), var(--bg2));
+  min-height:100vh;
+  color: var(--text);
+}
+
+.page-container{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 26px 22px 34px;
+}
+
+/* Outer shell card */
+.shell{
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 22px;
+}
+
+/* Header */
+.page-title{
+  text-align:center;
+  font-size: 28px;
+  font-weight: 900;
+  margin: 6px 0 10px;
+}
+
+.zone-line{
+  text-align:center;
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.zone-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.08);
+  font-weight: 900;
+  color: #111;
+}
+
+/* Form */
+.form-group{
+  margin-top: 8px;
+}
+
+.label{
+  font-weight: 900;
+  display:block;
+  margin-bottom: 8px;
+}
+
+/* textarea style */
+textarea{
+  width: 100%;
+  min-height: 170px;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.18);
+  resize: vertical;
+  font-size: 14.5px;
+  line-height: 1.6;
+  outline: none;
+}
+
+textarea:focus{
+  border-color: rgba(25,118,210,0.65);
+  box-shadow: 0 0 0 4px rgba(25,118,210,0.18);
+}
+
+/* Buttons row */
+.actions{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+/* Primary button */
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  height: 42px;
+  padding: 0 16px;
+
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.btn-primary:hover{ background: var(--blueHover); }
+.btn-primary:focus{
+  outline: 3px solid rgba(25,118,210,0.45);
+  outline-offset: 2px;
+}
+
+/* Back button (secondary) */
+.btn-back{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  height: 42px;
+  padding: 0 16px;
+
+  background: #fff;
+  color: #111;
+  border: 1px solid rgba(0,0,0,0.16);
+  border-radius: 12px;
+
+  text-decoration:none;
+  font-weight: 900;
+}
+
+.btn-back:hover{ background: rgba(25,118,210,0.08); }
+.btn-back:focus{
+  outline: 3px solid rgba(25,118,210,0.45);
+  outline-offset: 2px;
+}
+
+/* Message box */
+.msg{
+  margin-top: 14px;
+  font-weight: 800;
+  color: #111;
+}
+
+/* Optional: soften empty message spacing */
+.msg:empty{ display:none; }
+
+/* Responsive */
+@media (max-width: 520px){
+  .page-title{ font-size: 22px; }
+  textarea{ min-height: 150px; }
+}

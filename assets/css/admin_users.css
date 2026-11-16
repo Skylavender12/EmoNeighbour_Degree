@@ -1,0 +1,171 @@
+/* admin_users.css */
+
+/* header spacing inside the top card */
+.page-head-row{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.page-title{
+  margin: 0 0 6px;
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--text);
+}
+
+.page-subtitle{
+  margin: 0;
+  opacity: 0.78;
+  font-weight: 600;
+}
+
+.back-btn{
+  height: 38px;
+}
+
+/* table wrapper */
+.table-wrap{
+  width: 100%;
+  overflow: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.10);
+}
+
+/* base table */
+.data-table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 900px; /* keeps columns readable; wrapper scrolls if needed */
+  background: #fff;
+}
+
+.data-table thead th{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: rgba(0,0,0,0.04);
+  border-bottom: 1px solid rgba(0,0,0,0.10);
+  padding: 12px 12px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 900;
+  color: rgba(0,0,0,0.85);
+}
+
+.data-table tbody td{
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 12px;
+  font-size: 13px;
+  vertical-align: top;
+  color: rgba(0,0,0,0.88);
+}
+
+.data-table tbody tr:nth-child(even){
+  background: rgba(0,0,0,0.015);
+}
+
+.data-table tbody tr:hover{
+  background: rgba(25,118,210,0.06);
+}
+
+.strong{
+  font-weight: 900;
+}
+
+/* role pills */
+.pill{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  border: 1px solid rgba(0,0,0,0.14);
+  background: rgba(0,0,0,0.03);
+}
+
+.pill-admin{
+  background: rgba(25,118,210,0.10);
+  border-color: rgba(25,118,210,0.25);
+  color: #1976d2;
+}
+
+.pill-leader{
+  background: rgba(76,175,80,0.12);
+  border-color: rgba(76,175,80,0.25);
+  color: #2e7d32;
+}
+
+.pill-resident{
+  background: rgba(96,125,139,0.12);
+  border-color: rgba(96,125,139,0.25);
+  color: #455a64;
+}
+
+/* actions row */
+.row-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* small action buttons */
+.mini-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.14);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 12px;
+  color: #111;
+  background: #fff;
+}
+
+.mini-btn:hover{
+  background: rgba(0,0,0,0.04);
+}
+
+.mini-btn:focus{
+  outline: 3px solid rgba(9, 132, 227, 0.45);
+  outline-offset: 2px;
+}
+
+.mini-btn.danger{
+  background: rgba(198,40,40,0.08);
+  border-color: rgba(198,40,40,0.22);
+  color: var(--danger);
+}
+
+.mini-btn.danger:hover{
+  background: rgba(198,40,40,0.12);
+}
+
+/* empty state */
+.empty-row{
+  text-align: center;
+  padding: 18px 12px !important;
+  opacity: 0.75;
+  font-weight: 700;
+}
+
+/* hint */
+.table-hint{
+  margin: 10px 0 0;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* mobile tweaks */
+@media (max-width: 520px){
+  .page-title{ font-size: 24px; }
+  .page-head-row{ align-items: center; }
+}

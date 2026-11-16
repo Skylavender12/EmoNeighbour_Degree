@@ -1,0 +1,237 @@
+/* report.css */
+
+:root{
+  --bg1:#74ebd5;
+  --bg2:#acb6e5;
+
+  --card:#ffffff;
+  --text:#222;
+  --muted: rgba(0,0,0,0.62);
+
+  --shadow: 0 6px 16px rgba(0,0,0,0.12);
+  --shadow2: 0 10px 22px rgba(0,0,0,0.16);
+
+  --radius: 14px;
+
+  --primary:#1976d2;
+  --primaryHover:#1565c0;
+}
+
+*{ box-sizing:border-box; }
+
+html, body{
+  margin:0;
+  padding:0;
+  font-family:'Segoe UI', sans-serif;
+  background: linear-gradient(to right, var(--bg1), var(--bg2));
+  min-height:100vh;
+  color: var(--text);
+}
+
+.report-container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 22px 34px;
+}
+
+.page-title{
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 14px;
+}
+
+.card-box{
+  background: var(--card);
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0,0,0,0.06);
+  margin-bottom: 18px;
+}
+
+.card-box:hover{
+  box-shadow: var(--shadow2);
+}
+
+.card-box h3{
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* FILTER BAR */
+.filter-card{
+  background: var(--card);
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0,0,0,0.06);
+  margin-bottom: 18px;
+}
+
+.filter-row{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  align-items: end;
+}
+
+.filter-item{
+  display:flex;
+  flex-direction:column;
+  gap: 6px;
+}
+
+.filter-item label{
+  font-size: 13px;
+  font-weight: 900;
+  color: rgba(0,0,0,0.78);
+}
+
+.filter-item select{
+  height: 38px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.18);
+  background: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.filter-item select:focus{
+  border-color: rgba(25,118,210,0.65);
+  box-shadow: 0 0 0 4px rgba(25,118,210,0.18);
+}
+
+/* grid spans */
+.span-2{ grid-column: span 2; }
+.span-3{ grid-column: span 3; }
+.span-4{ grid-column: span 4; }
+.span-5{ grid-column: span 5; }
+.span-6{ grid-column: span 6; }
+.span-12{ grid-column: span 12; }
+
+/* zone display (resident) */
+.zone-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.10);
+  font-weight: 900;
+  color: #111;
+}
+
+/* Buttons */
+.btn-primary{
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.btn-primary:hover{ background: var(--primaryHover); }
+
+.btn-primary:focus{
+  outline: 3px solid rgba(25,118,210,0.45);
+  outline-offset: 2px;
+}
+
+.btn-secondary{
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.16);
+  background: #fff;
+  color: #111;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.btn-secondary:hover{
+  background: rgba(25,118,210,0.08);
+}
+
+.btn-secondary:focus{
+  outline: 3px solid rgba(25,118,210,0.45);
+  outline-offset: 2px;
+}
+
+/* CHART GRID */
+.chart-row{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+/* --- CHART FIX (prevents squished / stretched charts) --- */
+.chart-holder{
+  position: relative;
+  width: 100%;
+  height: 340px;  /* ✅ change this to make charts taller/shorter */
+}
+
+.chart-holder canvas{
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Tables */
+.heatmap-table{
+  width:100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow:hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.14);
+}
+
+.heatmap-table th,
+.heatmap-table td{
+  border-right: 1px solid rgba(0,0,0,0.14);
+  border-bottom: 1px solid rgba(0,0,0,0.14);
+  padding: 10px 8px;
+  text-align:center;
+  font-size: 13px;
+}
+
+.heatmap-table th{
+  background: rgba(0,0,0,0.04);
+  font-weight: 900;
+}
+
+.heatmap-table tr:last-child td{ border-bottom: 0; }
+.heatmap-table th:last-child,
+.heatmap-table td:last-child{ border-right: 0; }
+
+/* Heat colours */
+.heat-pos { background:#d4ffd8; }
+.heat-neu { background:#e0e0e0; }
+.heat-neg { background:#ffd4d4; }
+.domain-cell-nz { background:#e6f0ff; }
+
+.back-wrap{
+  margin-top: 6px;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .page-title{ font-size: 22px; }
+  .filter-row{ grid-template-columns: repeat(6, 1fr); }
+  .chart-holder{ height: 300px; }
+}
+
+@media (max-width: 520px){
+  .filter-row{ grid-template-columns: repeat(2, 1fr); }
+  .span-2,.span-3,.span-4,.span-5,.span-6,.span-12{ grid-column: span 2; }
+  .chart-holder{ height: 260px; }
+}

@@ -1,0 +1,7 @@
+Feedback,VADER Sentiment,VADER Score,RoBERTa Sentiment,Confidence
+I love living in this neighbourhood!,positive,0.6696,positive,0.9835020899772644
+The noise every night makes me so angry.,negative,-0.6418,negative,0.9482548832893372
+Everything feels okay and calm today.,positive,0.4939,positive,0.9275238513946533
+I am disappointed with the cleanliness of the area.,negative,-0.4767,negative,0.9251576662063599
+My neighbours are very supportive and friendly.,positive,0.7146,positive,0.9702904224395752
+I feel stressed about community problems.,negative,-0.6249,negative,0.8300517201423645

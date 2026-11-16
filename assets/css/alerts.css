@@ -1,0 +1,257 @@
+/* ../assets/css/alerts.css */
+
+:root{
+  --primary:#1976d2;
+  --primaryHover:#1565c0;
+  --success:#28a745;
+  --successHover:#218838;
+  --radius: 12px;
+}
+
+/* HERO */
+.alerts-hero{
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.alerts-header-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.alerts-title-row{
+  display:flex;
+  flex-direction:column;
+  gap: 6px;
+}
+
+.alerts-title{
+  font-size: 30px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.alerts-sub{
+  font-weight: 800;
+  opacity: 0.75;
+  font-size: 13px;
+}
+
+.alerts-desc{
+  margin-top: 12px;
+  opacity: 0.9;
+}
+
+/* Back button placed top-right in hero (red box area) */
+.back-top{
+  margin-left:auto;
+  white-space: nowrap;
+}
+
+/* Search */
+.search-card{
+  margin-bottom: 18px;
+}
+
+.search-row{
+  display:flex;
+  gap: 12px;
+  align-items:flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.search-left{
+  flex: 1 1 520px;
+  min-width: 260px;
+}
+
+.search-label{
+  display:block;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.search-input{
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.18);
+  outline: none;
+}
+
+.search-input:focus{
+  border-color: rgba(25,118,210,0.65);
+  box-shadow: 0 0 0 4px rgba(25,118,210,0.18);
+}
+
+.search-actions{
+  display:flex;
+  gap: 10px;
+}
+
+/* Buttons (match your dashboard style) */
+.btn-primary{
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+.btn-primary:hover{ background: var(--primaryHover); }
+.btn-primary:focus{
+  outline: 3px solid rgba(9, 132, 227, 0.45);
+  outline-offset: 2px;
+}
+
+.btn-secondary{
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.14);
+  background: #fff;
+  color: #111;
+  text-decoration:none;
+  font-weight: 900;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.btn-secondary:hover{ background: rgba(0,0,0,0.04); }
+.btn-secondary:focus{
+  outline: 3px solid rgba(9, 132, 227, 0.45);
+  outline-offset: 2px;
+}
+
+/* Alert cards */
+.alert-card{
+  margin-bottom: 18px;
+}
+
+.alert-top{
+  display:flex;
+  flex-direction:column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.alert-title{
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.alert-meta{
+  font-size: 13px;
+  opacity: 0.75;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items:center;
+}
+
+.dot{ opacity: 0.6; }
+
+.alert-body{
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+}
+
+.alert-section{
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.alert-label{
+  font-size: 12px;
+  font-weight: 900;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+.alert-text{
+  line-height: 1.45;
+}
+
+.alert-reason{
+  font-weight: 700;
+}
+
+.alert-actions{
+  margin-top: 12px;
+  display:flex;
+  justify-content:flex-end;
+}
+
+.btn-success{
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: none;
+  background: var(--success);
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+.btn-success:hover{ background: var(--successHover); }
+.btn-success:focus{
+  outline: 3px solid rgba(40,167,69,0.35);
+  outline-offset: 2px;
+}
+
+/* Empty state */
+.empty-card{
+  padding: 20px;
+}
+.empty-title{
+  font-size: 18px;
+  font-weight: 900;
+}
+.empty-sub{
+  margin-top: 6px;
+  opacity: 0.75;
+}
+
+/* Floating scroll-to-top button */
+.to-top{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.16);
+  background: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.16);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+.to-top.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.to-top:focus{
+  outline: 3px solid rgba(9, 132, 227, 0.45);
+  outline-offset: 2px;
+}
+
+@media (max-width: 520px){
+  .alerts-title{ font-size: 24px; }
+  .search-actions{ width: 100%; }
+  .btn-primary, .btn-secondary{ flex: 1; }
+}
